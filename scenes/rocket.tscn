@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3omfj078cxef"]
+
+[ext_resource type="ArrayMesh" uid="uid://b2p8ka8am1lge" path="res://models/rocket.obj" id="1_0k5t0"]
+[ext_resource type="Script" path="res://scripts/rocket.gd" id="1_8rt67"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_o7htn"]
+radius = 0.309747
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_648m5"]
+radius = 1.99961
+
+[node name="Rocket" type="RigidBody3D"]
+top_level = true
+collision_layer = 2
+collision_mask = 2
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_8rt67")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.275927, 0)
+mesh = ExtResource("1_0k5t0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00180054, 0)
+shape = SubResource("SphereShape3D_o7htn")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_648m5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

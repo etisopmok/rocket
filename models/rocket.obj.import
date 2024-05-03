@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b2p8ka8am1lge"
+path="res://.godot/imported/rocket.obj-90cea079b95d191e4992ca120be1778e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rocket.obj-90cea079b95d191e4992ca120be1778e.mesh"]
+
+source_file="res://models/rocket.obj"
+dest_files=["res://.godot/imported/rocket.obj-90cea079b95d191e4992ca120be1778e.mesh", "res://.godot/imported/rocket.obj-90cea079b95d191e4992ca120be1778e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
